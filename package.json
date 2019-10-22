@@ -1,0 +1,22 @@
+{
+  "name": "benovate_tz",
+  "version": "1.0.0",
+  "description": "Tools used for implementation",
+  "main": "index.js",
+  "author": "p1xar <melnichukr@ya.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^9.6.5",
+    "csso-cli": "^2.0.2",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss src/scss/main.scss src/css/style.css",
+    "minify-js": "uglifyjs src/js/index.js -m -с -o build/js/index.min.js",
+    "minify-css": "csso src/css/style.css --output build/css/style.min.css",
+    "prefix-css": "npx postcss src/css/style.css --use autoprefixer -d src/css",
+    "build": "npm run build-css && npm run minify-js && npm run prefix-css && npm run minify-css",
+    "start": "nodemon -e js,scss -x \"npm run build\" --ignore build/"
+  }
+}
