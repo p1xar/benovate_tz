@@ -1,0 +1,15 @@
+@import "src/scss/shared/font-inherit";
+.gallery {
+  @extend %font-inherit;
+  display: flex;
+  flex-direction: column;
+  background: #222226;
+  &__title {
+    font-size: 3rem;
+    text-align: center;
+    color: #B9CD32;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+}
