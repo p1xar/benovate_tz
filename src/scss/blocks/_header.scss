@@ -1,0 +1,4 @@
+@import 'src/scss/shared/font-inherit';
+h1 {
+    @extend %font-inherit;
+}
