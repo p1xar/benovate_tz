@@ -1,4 +1,133 @@
-@import 'src/scss/shared/font-inherit';
-h1 {
-    @extend %font-inherit;
+@import "src/scss/shared/font-inherit";
+// Common properties for elements
+%common-flex-center {
+  display: flex;
+  align-items: center;
 }
+
+%common-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%common-icon {
+  width: 2.625rem;
+  height: 2.625rem;
+  margin-right: 1rem;
+}
+
+%common-fontsize {
+  font-size: 1rem;
+  margin: 0;
+}
+
+%common-component-text {
+  @extend %common-flex-column;
+  &__text {
+    @extend %common-fontsize;
+    margin: 0;
+  }
+  &__link {
+    color: rgba(0, 0, 0, 0.543846);
+    margin-top: 0.375rem;
+    font-size: 0.875rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  @extend %font-inherit;
+  &-bgwhite {
+    background-color: white;
+  }
+}
+
+// Logo
+.logo {
+  @extend %common-flex-column;
+  &__title {
+    font-size: 1.75rem;
+    margin-bottom: 0rem;
+    & a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  &__description {
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+// Pricelist
+.priceList {
+  @extend %common-flex-center;
+  @media (max-width: 768px) {
+      display: none;
+  }
+}
+
+.priceListIcon {
+  &__icon {
+    @extend %common-icon;
+  }
+}
+
+.priceListText {
+  @extend %common-flex-column;
+  &__text {
+    @extend %common-fontsize;
+  }
+  &__link {
+    color: rgba(0, 0, 0, 0.543846);
+    margin-top: 0.375rem;
+    font-size: 0.875rem;
+  }
+}
+
+// Contacts
+.contacts {
+  @extend %common-flex-center;
+}
+
+.contactsIcon {
+    align-self: baseline;
+    &__icon {
+    @extend %common-icon;
+  }
+}
+
+.contactsText {
+  @extend %common-flex-column;
+  &__number {
+    @extend %common-fontsize;
+    margin: 0;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+  }
+  &__hours {
+    color: rgba(0, 0, 0, 0.543846);
+    margin-top: 0.375rem;
+    font-size: 0.875rem;
+  }
+}
+
+.location {
+    @extend %common-flex-center;
+    &__icon {
+        @extend %common-icon;
+        align-self: baseline;
+    }
+    &__address {
+        @extend %common-fontsize;
+        @extend %font-inherit;
+        line-height: 1.125rem;
+        max-width: 16.25rem;
+    }
+}
+

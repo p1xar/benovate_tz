@@ -1,7 +1,9 @@
 .wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 960px;
-  padding-right: 10px;
-  padding-left: 10px;
+  @media screen and (min-width: 1280px) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 80rem;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+  }
 }
