@@ -49,6 +49,7 @@
   align-items: center;
   position: sticky;
   top: 0;
+  padding-bottom: 0.3rem;
   @extend %font-inherit;
   &-bgwhite {
     background-color: white;
