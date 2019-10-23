@@ -1,0 +1,60 @@
+.directions {
+  @import "src/scss/shared/font-inherit";
+  display: flex;
+  justify-content: center;
+  background-image: url(../../build/img/map.webp);
+  height: 47rem;
+  position: relative;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    height: 100%;
+    background-size: contain;
+    flex-direction: column-reverse;
+  }
+}
+
+.dirDesctiption {
+  width: 22.5rem;
+  height: 27.375rem;
+  background: #fff;
+  padding: 0rem 2.5rem;
+  position: absolute;
+  left: 6rem;
+  top: 9rem;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    position: initial;
+    padding: 0rem;
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    font-size: 1.5rem;
+    color: #b9cd32;
+  }
+}
+
+.dirDesctiptionRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  &__icon {
+    align-self: baseline;
+    margin-right: 1rem;
+    max-width: 2.7rem;
+  }
+}
+
+.twoLines {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-size: 1rem;
+    margin: 0;
+  }
+  &__desc {
+    font-size: 0.875rem;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.543846);
+    font-style: normal;
+    text-decoration: none;
+  }
+}

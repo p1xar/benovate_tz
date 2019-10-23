@@ -1,0 +1,10 @@
+.footer {
+  @import "src/scss/shared/font-inherit";
+  background: #222226;
+  &__title {
+    color: #B9CD32;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-left: 2rem;
+  }
+}

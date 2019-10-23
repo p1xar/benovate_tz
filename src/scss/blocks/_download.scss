@@ -5,8 +5,10 @@
   flex-direction: column;
   align-items: center;
   padding: 0 16.125rem;
+  margin-bottom: 5.9375rem;
   @media screen and (min-width: 320px) and (max-width: 768px) {
     padding: 0 1.5rem;
+    margin-bottom: 1rem;
   }
   &__text {
     margin-top: 6rem;
