@@ -1,0 +1,35 @@
+@import "src/scss/shared/font-inherit";
+.download {
+  @extend %font-inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16.125rem;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
+  &__text {
+    margin-top: 6rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      margin-top: 2.1875rem;
+    }
+  }
+  &__button {
+    background: #b9cd32;
+    border: 0;
+    box-shadow: 0rem 0.125rem 0.125rem rgba(0, 0, 0, 0.24),
+      0rem 0rem 0.125rem rgba(0, 0, 0, 0.12);
+    border-radius: 0.125rem;
+    padding: 0.4375rem 0.75rem;
+    color: #fff;
+    cursor: pointer;
+    align-self: flex-start;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      align-self: center;
+    }
+  }
+}
